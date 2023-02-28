@@ -7,5 +7,5 @@
 ![ori](https://user-images.githubusercontent.com/90775550/221798226-fde42a00-4197-4583-8079-71604b21dceb.png)
 
 
-# DECA's Reconstruction(left) vs OUR's(right)
+# DECA(left) vs OUR's(right)
 ![37](https://user-images.githubusercontent.com/90775550/221798863-cc91d9df-28a4-4ce7-8a0e-d178dde30e99.png)
