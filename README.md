@@ -1,6 +1,6 @@
 # Asymmetric_DECA
-<p>This Script aims to fix the limitation of the 3D face template.</p>
-<p>It's just the first step, future work will focus on the design of the loss function. </p>
+- <p>This Script aims to fix the limitation of the 3D face template.</p>
+- <p>It's just the first step, future work will focus on the design of the loss function. </p>
 
 ## Pictures of facial palsy patients
 <p align="center">
