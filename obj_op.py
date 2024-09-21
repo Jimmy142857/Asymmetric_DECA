@@ -216,35 +216,7 @@ def damping_mov(N, Mov, round, vertices, position):
             elif position == 'lip':
                 Mov_Step_X = Mov_Ori[0] * math.cos(q * math.pi / (2 * len(round))) * (len(round) - q) / len(round)
                 Mov_Step_Y = Mov_Ori[1] * math.cos(q * math.pi / (2 * len(round))) * (len(round) - q) / len(round)
-                Mov_Step_Z = Mov_Ori[2] * (len(round) -  q) / len(round)
-
-            # X方向可选库
-            # Mov_Step_X = Mov_Ori[0] * (len(round) - q) / len(round)                                                        # 基位移公式 XY 线性衰减 
-            # Mov_Step_X = Mov_Ori[0] * math.cos(q * math.pi / 24)                                                           # 余弦形式1 (对应Test6)
-            # Mov_Step_X = Mov_Ori[0] * math.cos(q * math.pi / (2 * len(round)))                                             # 余弦形式2 
-            # Mov_Step_X = Mov_Ori[0] * math.cos(q * math.pi / (2 * len(round))) * (len(round) - q) / len(round)             # 余弦形式2 * 线性衰减因子 ( √ )
-            # Mov_Step_X = Mov_Ori[0] * (math.exp(-q+8)) / (1 + math.exp(-q+8))                                              # 指数形式1
-            # Mov_Step_X = Mov_Ori[0] * (math.exp(-q+5)) / (1 + math.exp(-q+5))                                              # 指数形式2
-            # Mov_Step_X = Mov_Ori[0] * (math.exp(-0.6*q+5)) / (1 + math.exp(-0.6*q+5))                                      # 指数形式3
-            # Mov_Step_X = Mov_Ori[0] * (math.exp(-0.6*q+5)) / (1 + math.exp(-0.6*q+5)) * (len(round) - q) / len(round)      # 指数形式3 * 线性衰减因子
-
-            # Y方向
-            # Mov_Step_Y = Mov_Ori[1] * (len(round) - q) / len(round)
-            # Mov_Step_Y = Mov_Ori[1] * math.cos(q * math.pi / 24)
-            # Mov_Step_Y = Mov_Ori[1] * math.cos(q * math.pi / (2 * len(round)))
-            # Mov_Step_Y = Mov_Ori[1] * math.cos(q * math.pi / (2 * len(round))) * (len(round) - q) / len(round)
-            # Mov_Step_Y = Mov_Ori[1] * (math.exp(-q+8)) / (1 + math.exp(-q+8))
-            # Mov_Step_Y = Mov_Ori[1] * (math.exp(-q+5)) / (1 + math.exp(-q+5))
-            # Mov_Step_Y = Mov_Ori[1] * (math.exp(-0.6*q+5)) / (1 + math.exp(-0.6*q+5))
-            # Mov_Step_Y = Mov_Ori[1] * (math.exp(-0.6*q+5)) / (1 + math.exp(-0.6*q+5)) * (len(round) - q) / len(round)
-
-            # Z方向
-            # Mov_Step_Z = Mov_Ori[2] * (len(round) -  q) / len(round)                                                       # 基位移公式 Z (对应Test1)
-            # Mov_Step_Z = Mov_Ori[2] * (len(round) - 2 * q) / len(round)                                                    # 线性衰减
-            # Mov_Step_Z = Mov_Ori[2] * math.cos( q * math.pi /8)                                                            # 余弦形式1
-            # Mov_Step_Z = Mov_Ori[2] * math.cos( q * math.pi /8) * (len(round) - q) / len(round)                            # 余弦形式1 * 线性衰减因子
-            # Mov_Step_Z = Mov_Ori[2] * math.cos( q * math.pi /12) * (len(round) - q) / len(round)                           # 余弦形式2 * 线性衰减因子 ( √ )
-            
+                Mov_Step_Z = Mov_Ori[2] * (len(round) -  q) / len(round)          
 
             Mov_Step = np.array([Mov_Step_X, Mov_Step_Y, Mov_Step_Z])
         
